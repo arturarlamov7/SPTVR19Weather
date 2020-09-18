@@ -15,27 +15,12 @@ import java.util.Scanner;
 class App {
     public void run(){
         System.out.println("---- Weather ----");
-        System.out.println("Задание:");
-        System.out.println("Создайте зубчатый массив,");
-        System.out.println("в котором хранится температура воздуха");
-        System.out.println("в нашем городе  на весь год");
-        System.out.println("Массив должен содержать 12 строк, количество");
-        System.out.println("столбцов - количество дней в месяце.");
-        System.out.println("Заполните массив случайными числами. Температура");
-        System.out.println("зависит от времени года. ");
-        System.out.println("Программа должна вывести на экран:");
-        System.out.println("- погоду на указанную дату (месяц, день – пользователь ");
-        System.out.println("  вводит данные с помощью клавиатуры) ");
-        System.out.println("- в какие дни была самая теплая и самая холодная погода ");
-        System.out.println("- среднюю температуру по каждому месяцу ");
-        System.out.println("Решение:");
-        System.out.println("Создаем, заполняем и выводим зубчатый массив с погодой.");
         int min = -30;
         int max = 30;
         int n = 0;
         Random random = new Random();
         int[][] tempInYear = new int[12][];
-        //выведем строку с номерами дней месяца
+        //строка
         System.out.print("     ");
         for (int i = 1; i < 32; i++) {
             System.out.printf("%4d",i);
@@ -62,7 +47,6 @@ class App {
                 case 11: min=-15; max=-5; n=31; break;
                 
             }
-            //создаем ячейки месяца
             tempInYear[i] = new int[n];
             System.out.printf("%4d) ",i+1);
             for (int j = 0; j < tempInYear[i].length; j++) {
